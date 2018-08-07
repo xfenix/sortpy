@@ -1,6 +1,8 @@
 Normal sorting
 ===
 
+[![Build Status](https://travis-ci.org/xfenix/xfsort.svg?branch=master)](https://travis-ci.org/xfenix/xfsort)
+
 Currenly implemented sorted algorithms:
 
 * Bubble (of course just for fun)
