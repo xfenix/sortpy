@@ -1,7 +1,6 @@
 def sort(array):
-    for i, item in enumerate(array):
-        for j, subitem in enumerate(array[i:]):
-            if item > subitem:
-                array[j + i] = item
-                array[i] = subitem
+    for i in range(len(array)):
+        for j in range(len(array) - 1, i, -1):
+            if array[j] < array[j - 1]:
+                array[j], array[j - 1] = array[j - 1], array[j]
     return array
