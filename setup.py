@@ -20,10 +20,11 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     test_suite='nose.collector',
     tests_require=['nose'],
-    classifiers=(
+    zip_safe=False,
+    classifiers=[
         'Programming Language :: Python :: 3',
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
-    ),
+    ],
 )
