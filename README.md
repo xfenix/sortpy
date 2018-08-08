@@ -10,6 +10,11 @@ Currenly implemented sorted algorithms:
 * Merge
 * More to go...
 
+Compatibility
+--------
+
+Python 3.5+ (test coverage include python 3.5, 3.6, 3.7)
+
 Also
 --------
 
