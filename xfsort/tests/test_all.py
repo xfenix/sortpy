@@ -35,14 +35,14 @@ class TestSortWithFixturesCase(BasicCase):
     def test_merge(self):
         self._run_algo_case('merge')
 
-    def test_heap(self):
-        self._run_algo_case('heap')
+    # def test_heap(self):
+    #     self._run_algo_case('heap')
 
 
 class TestSortWithAutoRandomData(BasicCase):
     total_cases = 30
-    case_length_min = 900
-    case_length_max = 5000
+    case_length_min = 100
+    case_length_max = 3000
 
     def gen_cases(self):
         test_cases = []
@@ -62,5 +62,11 @@ class TestSortWithAutoRandomData(BasicCase):
     def test_quick(self):
         self._run_algo_case('quick')
 
-    def test_heap(self):
-        self._run_algo_case('heap')
+    def test_merge(self):
+        self._run_algo_case('merge')
+
+    def test_bubble(self):
+        self._run_algo_case('bubble')
+
+    # def test_heap(self):
+    #     self._run_algo_case('heap')
