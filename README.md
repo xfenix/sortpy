@@ -15,6 +15,12 @@ Compatibility
 
 Python 3.5+ (test coverage include python 3.5, 3.6, 3.7)
 
+Usage
+--------
+
+* Install xfsort with `python setup.py install` (pip install xfsort in near future)
+* Import sorting algorithm `from xfsort.quick import sort`
+
 Also
 --------
 
