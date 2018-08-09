@@ -3,15 +3,31 @@ from importlib import import_module
 from unittest import TestCase
 
 
-class BasicCase(TestCase):
-    def _run_algo_case(self, test_cases, sort_module):
+class BasicCase:
+    def run_algo_case(self, sort_module):
+        return None
+
+    def run_case(self, test_cases, sort_module):
         module = import_module('xfsort.{}'.format(sort_module))
         for one_case in test_cases:
             self.assertEqual(tuple(module.sort(list(one_case['input']))),
                              tuple(one_case['result']))
 
+    def test_quick(self):
+        self.run_algo_case('quick')
 
-class TestSortWithFixturesCase(BasicCase):
+    def test_bubble(self):
+        self.run_algo_case('bubble')
+
+    def test_merge(self):
+        self.run_algo_case('merge')
+
+    def test_insertion(self):
+        self.run_algo_case('insertion')
+
+
+class TestSortWithFixturesCase(TestCase, BasicCase):
+    algorithms = ('quick', 'bubble')
     test_cases = (
         dict(input=(100, 20, 1, 300, 100),
              result=(1, 20, 100, 100, 300)),
@@ -23,23 +39,11 @@ class TestSortWithFixturesCase(BasicCase):
              result=('a', 'abc', 'b', 'x', 'ya', 'z')),
     )
 
-    def _run_algo_case(self, sort_module):
-        super()._run_algo_case(self.test_cases, sort_module)
-
-    def test_quick(self):
-        self._run_algo_case('quick')
-
-    def test_bubble(self):
-        self._run_algo_case('bubble')
-
-    def test_merge(self):
-        self._run_algo_case('merge')
-
-    # def test_heap(self):
-    #     self._run_algo_case('heap')
+    def run_algo_case(self, sort_module):
+        super().run_case(self.test_cases, sort_module)
 
 
-class TestSortWithAutoRandomData(BasicCase):
+class TestSortWithAutoRandomData(TestCase, BasicCase):
     total_cases = 30
     case_length_min = 100
     case_length_max = 3000
@@ -56,17 +60,5 @@ class TestSortWithAutoRandomData(BasicCase):
                 dict(input=input_data, result=sorted(input_data)))
         return test_cases
 
-    def _run_algo_case(self, sort_module):
-        super()._run_algo_case(self.gen_cases(), sort_module)
-
-    def test_quick(self):
-        self._run_algo_case('quick')
-
-    def test_merge(self):
-        self._run_algo_case('merge')
-
-    def test_bubble(self):
-        self._run_algo_case('bubble')
-
-    # def test_heap(self):
-    #     self._run_algo_case('heap')
+    def run_algo_case(self, sort_module):
+        super().run_case(self.gen_cases(), sort_module)
