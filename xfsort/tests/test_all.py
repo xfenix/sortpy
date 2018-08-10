@@ -25,6 +25,9 @@ class BasicCase:
     def test_insertion(self):
         self.run_algo_case('insertion')
 
+    def test_heap(self):
+        self.run_algo_case('heap')
+
 
 class TestSortWithFixturesCase(TestCase, BasicCase):
     algorithms = ('quick', 'bubble')
