@@ -18,8 +18,8 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     url='https://github.com/pypa/xfsort',
     packages=setuptools.find_packages(),
-    test_suite='nose.collector',
-    tests_require=['nose'],
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest', 'pytest-cov'],
     zip_safe=False,
     classifiers=[
         'Programming Language :: Python :: 3',
