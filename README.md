@@ -8,6 +8,8 @@ Currenly implemented sorting algorithms:
 * Bubble (of course just for fun)
 * Quick (with random pivot)
 * Merge
+* Insertion
+* Heap
 * More to go...
 
 Compatibility
