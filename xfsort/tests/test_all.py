@@ -28,6 +28,9 @@ class BasicCase:
     def test_heap(self):
         self.run_algo_case('heap')
 
+    def test_shell(self):
+        self.run_algo_case('shell')
+
 
 class TestSortWithFixturesCase(TestCase, BasicCase):
     algorithms = ('quick', 'bubble')
