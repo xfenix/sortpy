@@ -28,8 +28,13 @@ class BasicCase:
     def test_heap(self):
         self.run_algo_case('heap')
 
+    def test_counting(self):
+        if not hasattr(self, 'is_fixture_case'):
+            self.run_algo_case('counting')
+
 
 class TestSortWithFixturesCase(TestCase, BasicCase):
+    is_fixture_case = True
     algorithms = ('quick', 'bubble')
     test_cases = (
         dict(input=(100, 20, 1, 300, 100),
