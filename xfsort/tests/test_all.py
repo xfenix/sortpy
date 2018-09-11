@@ -28,6 +28,9 @@ class BasicCase:
     def test_heap(self):
         self.run_algo_case('heap')
 
+    def test_shell(self):
+        self.run_algo_case('shell')
+
     def test_counting(self):
         if not hasattr(self, 'is_fixture_case'):
             self.run_algo_case('counting')
