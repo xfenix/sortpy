@@ -4,7 +4,7 @@ python:
   - "3.6"
   - "3.7-dev"
 install:
-  - python setup.py -q install
+  - pip install -r test_reqs.txt
 script:
   - python setup.py test
   - codecov -t $CODECOV_TOKEN
