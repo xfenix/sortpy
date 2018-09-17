@@ -19,7 +19,7 @@ setuptools.setup(
     url='https://github.com/pypa/xfsort',
     packages=setuptools.find_packages(),
     setup_requires=['pytest-runner'],
-    tests_require=['pytest', 'pytest-cov'],
+    tests_require=['pytest', 'pytest-cov', 'codecov'],
     zip_safe=False,
     classifiers=[
         'Programming Language :: Python :: 3',
