@@ -1,17 +1,21 @@
+import string
 import random
 from importlib import import_module
 from unittest import TestCase
 
 
 class BasicCase:
+    is_str_case = True
+
     def run_algo_case(self, sort_module):
         return None
 
     def run_case(self, test_cases, sort_module):
         module = import_module('xfsort.{}'.format(sort_module))
         for one_case in test_cases:
-            self.assertEqual(tuple(module.sort(list(one_case['input']))),
-                             tuple(one_case['result']))
+            self.assertEqual(
+                tuple(module.sort(list(one_case['input']))),
+                tuple(one_case['result']))
 
     def test_quick(self):
         self.run_algo_case('quick')
@@ -32,13 +36,11 @@ class BasicCase:
         self.run_algo_case('shell')
 
     def test_counting(self):
-        if not hasattr(self, 'is_fixture_case'):
+        if not self.is_str_case:
             self.run_algo_case('counting')
 
 
-class TestSortWithFixturesCase(TestCase, BasicCase):
-    is_fixture_case = True
-    algorithms = ('quick', 'bubble')
+class TestSortWithFixturesIntCase(TestCase, BasicCase):
     test_cases = (
         dict(input=(100, 20, 1, 300, 100),
              result=(1, 20, 100, 100, 300)),
@@ -54,7 +56,8 @@ class TestSortWithFixturesCase(TestCase, BasicCase):
         super().run_case(self.test_cases, sort_module)
 
 
-class TestSortWithAutoRandomData(TestCase, BasicCase):
+class TestSortWithAutoRandomIntDataCase(TestCase, BasicCase):
+    is_str_case = False
     total_cases = 30
     case_length_min = 100
     case_length_max = 3000
@@ -66,10 +69,37 @@ class TestSortWithAutoRandomData(TestCase, BasicCase):
             calc_case_length = random.randint(
                 self.case_length_min, self.case_length_max)
             for _ in range(calc_case_length):
-                input_data.append(random.randint(0, 100000))
+                input_data.append(random.randint(-100000, 100000))
             test_cases.append(
                 dict(input=input_data, result=sorted(input_data)))
         return test_cases
 
     def run_algo_case(self, sort_module):
         super().run_case(self.gen_cases(), sort_module)
+
+
+class TestSortWithAutoRandomStrDataCase(TestCase, BasicCase):
+    total_cases = 30
+    case_length_min = 1
+    case_length_max = 40
+
+    def gen_cases(self):
+        test_cases = []
+        for _ in range(self.total_cases):
+            input_data = []
+            calc_case_length = random.randint(
+                self.case_length_min, self.case_length_max)
+            for _ in range(calc_case_length):
+                input_data.append(random.choice(string.ascii_lowercase))
+            input_data = ''.join(input_data)
+            test_cases.append(
+                dict(input=input_data, result=sorted(input_data)))
+        return test_cases
+
+    def run_algo_case(self, sort_module):
+        super().run_case(self.gen_cases(), sort_module)
+
+
+class VariousCase(TestCase):
+    def test_import(self):
+        from ..__init__ import __version__
