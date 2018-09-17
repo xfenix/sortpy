@@ -2,6 +2,7 @@ Normal sorting
 ===
 
 [![Build Status](https://travis-ci.org/xfenix/xfsort.svg?branch=master)](https://travis-ci.org/xfenix/xfsort)
+[![codecov](https://codecov.io/gh/xfenix/xfsort/branch/master/graph/badge.svg)](https://codecov.io/gh/xfenix/xfsort)
 
 Currenly implemented sorting algorithms:
 
