@@ -40,7 +40,7 @@ class BasicCase:
             self.run_algo_case('counting')
 
 
-class TestSortWithFixturesIntCase(TestCase, BasicCase):
+class TestSortWithFixturesMixedCase(TestCase, BasicCase):
     test_cases = (
         dict(input=(100, 20, 1, 300, 100),
              result=(1, 20, 100, 100, 300)),
