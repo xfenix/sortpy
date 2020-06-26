@@ -49,6 +49,7 @@ jobs:
       env:
         FLIT_USERNAME: ${{ secrets.FLIT_USERNAME }}
         FLIT_PASSWORD: ${{ secrets.FLIT_PASSWORD }}
+      continue-on-error: true
       run: |
         pip install pipenv
         pipenv install
