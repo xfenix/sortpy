@@ -3,7 +3,7 @@ requires = ["flit_core >=2.3.0,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "xfsort"
+module = "xfsort-collection"
 author = "Denis Anikin"
 author-email = "ad@xfenix.ru"
 home-page = "https://github.com/xfenix/xfsort"
