@@ -26,9 +26,9 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pip install -r test_reqs.txt
-        pytest --cov=./xfsort --cov-report=xml
-        python setup.py install
+        pip install pipenv
+        pipenv install
+        pipenv run pytest --cov=./xfsort --cov-report=xml
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
