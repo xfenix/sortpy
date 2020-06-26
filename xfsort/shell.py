@@ -6,7 +6,7 @@ def sort(array):
             j = i
             while j >= gap and array[j - gap] > temp:
                 array[j] = array[j - gap]
-                j = j-gap
+                j = j - gap
             array[j] = temp
         gap = int(gap / 2)
     return array
