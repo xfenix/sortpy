@@ -29,6 +29,8 @@ jobs:
         pip install pipenv
         pipenv install
         pipenv run pytest --cov=./xfsort --cov-report=xml
+        pipenv run flit install
+        pipenv run flit publish
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1

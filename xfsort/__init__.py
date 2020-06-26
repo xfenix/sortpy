@@ -1,2 +1,6 @@
-VERSION = (1, 0, 2)
-__version__ = '.'.join(map(str, VERSION))
+"""Core package module.
+"""
+
+
+VERSION: tuple = (1, 0, 3)
+__version__: str = '.'.join(map(str, VERSION))
