@@ -1,8 +1,9 @@
 """Basic sort module.
 """
+from __future__ import annotations
 
 
-def sort(array):
+def sort(array: list[int]) -> list[int]:
     """Naive bubble sort implementation.
     """
     for i in range(len(array)):

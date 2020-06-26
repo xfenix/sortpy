@@ -1,13 +1,15 @@
 """Basic sort module.
 """
+from __future__ import annotations
+import typing
 
 
-def sort(array):
+def sort(array: list) -> list:
     """Insertion sort implementation.
     """
     for j in range(1, len(array)):
-        key = array[j]
-        i = j - 1
+        key: typing.Any = array[j]
+        i: int = j - 1
         while i > -1 and key < array[i]:
             array[i + 1] = array[i]
             i = i - 1

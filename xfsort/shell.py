@@ -1,15 +1,16 @@
 """Basic sort module.
 """
+import typing
 
 
-def sort(array):
+def sort(array: list) -> list:
     """Shell sort implementation.
     """
-    gap = int(len(array) / 2)
+    gap: int = int(len(array) / 2)
     while gap > 0:
         for i in range(gap, len(array)):
-            temp = array[i]
-            j = i
+            temp: typing.Any = array[i]
+            j: int = i
             while j >= gap and array[j - gap] > temp:
                 array[j] = array[j - gap]
                 j = j - gap

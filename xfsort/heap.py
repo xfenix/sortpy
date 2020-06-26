@@ -1,13 +1,13 @@
 """Basic sort module.
 """
+from __future__ import annotations
 
 
-def sort(array):
+def sort(array: list) -> list:
     """Heapsort implementation.
     """
-    def sift(start, count):
-        root = start
-
+    def sift(start: int, count: int) -> None:
+        root: int = start
         while root * 2 + 1 < count:
             child = root * 2 + 1
             if child < count - 1 and array[child] < array[child + 1]:
@@ -18,9 +18,9 @@ def sort(array):
             else:
                 return
 
-    count = len(array)
-    start = int(count / 2) - 1
-    end = count - 1
+    count: int = len(array)
+    start: int = int(count / 2) - 1
+    end: int = count - 1
 
     while start >= 0:
         sift(start, count)
