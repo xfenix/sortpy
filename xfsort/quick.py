@@ -1,7 +1,11 @@
+"""Basic sort module.
+"""
 import random
 
 
 def sort(array):
+    """Quick sort implementation with random pivot point.
+    """
     total_length = len(array)
     if total_length < 2:
         return array

@@ -1,4 +1,10 @@
+"""Basic sort module.
+"""
+
+
 def sort(array):
+    """Merge sort implementation.
+    """
     if len(array) < 2:
         return array
     result, mid = [], int(len(array) / 2)

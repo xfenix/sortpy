@@ -1,4 +1,10 @@
+"""Basic sort module.
+"""
+
+
 def sort(array):
+    """Counting sort implementation.
+    """
     result = [0] * len(array)
     low = min(array)
     high = max(array)

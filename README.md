@@ -16,7 +16,7 @@ Currenly implemented sorting algorithms:
 Compatibility
 --------
 
-Python 3.5+ (test coverage include python 3.5, 3.6, 3.7)
+Python 3.5+ (test coverage include python 3.5, 3.6, 3.7, 3.8)
 
 Usage
 --------

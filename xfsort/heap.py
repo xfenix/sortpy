@@ -1,4 +1,10 @@
+"""Basic sort module.
+"""
+
+
 def sort(array):
+    """Heapsort implementation.
+    """
     def sift(start, count):
         root = start
 

@@ -1,4 +1,10 @@
+"""Basic sort module.
+"""
+
+
 def sort(array):
+    """Insertion sort implementation.
+    """
     for j in range(1, len(array)):
         key = array[j]
         i = j - 1

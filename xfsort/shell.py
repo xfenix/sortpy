@@ -1,4 +1,10 @@
+"""Basic sort module.
+"""
+
+
 def sort(array):
+    """Shell sort implementation.
+    """
     gap = int(len(array) / 2)
     while gap > 0:
         for i in range(gap, len(array)):
