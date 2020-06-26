@@ -1,17 +1,24 @@
+"""Tests core.
+"""
 import string
 import random
+import pathlib
 from importlib import import_module
 from unittest import TestCase
 
 
 class BasicCase:
+    """Basic core case.
+    """
+
+    CURRENT_DIR = pathlib.Path(__file__).resolve().parent.parent
     is_str_case = True
 
     def run_algo_case(self, sort_module):
         return None
 
     def run_case(self, test_cases, sort_module):
-        module = import_module('xfsort.{}'.format(sort_module))
+        module = import_module(f'{self.CURRENT_DIR.stem}.{sort_module}')
         for one_case in test_cases:
             self.assertEqual(
                 tuple(module.sort(list(one_case['input']))),
