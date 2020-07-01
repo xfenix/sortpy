@@ -5,7 +5,7 @@ Normal sorting
 [![codecov](https://codecov.io/gh/xfenix/xfsort/branch/master/graph/badge.svg)](https://codecov.io/gh/xfenix/xfsort)
 
 Various sorting algorithms implemented in pure python. Now with typing support and for python 3.7/3.8.  
-Currenly implemented sorting algorithms:
+Currently implemented following:
 * Bubble (of course just for fun)
 * Quick (with random pivot)
 * Merge
