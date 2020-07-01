@@ -19,8 +19,8 @@ Python 3.7+ (test coverage include python 3.7, 3.8)
 
 Usage
 --------
-* Install xfsort with `python setup.py install` (pip install xfsort in near future)
-* Import sorting algorithm `from xfsort.quick import sort`
+* Install `pip install xfsort_collection`
+* Import sorting algorithm `from xfsort_collection.quick import sort`
 
 Also
 --------
