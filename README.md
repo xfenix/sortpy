@@ -1,6 +1,6 @@
 Normal sorting
 ===
-[![PyPI version](https://badge.fury.io/py/xfsort_collection.svg)](https://badge.fury.io/py/xfsort_collection)
+[![PyPI version](https://badge.fury.io/py/sortpy.svg)](https://badge.fury.io/py/sortpy)
 ![CI status](https://github.com/xfenix/xfsort/workflows/Python%20package/badge.svg)
 [![codecov](https://codecov.io/gh/xfenix/xfsort/branch/master/graph/badge.svg)](https://codecov.io/gh/xfenix/xfsort)
 
