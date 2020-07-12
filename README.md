@@ -19,9 +19,11 @@ Python 3.7+ (test coverage include python 3.7, 3.8)
 
 Usage
 --------
-* Install `pip install xfsort_collection`
-* Import sorting algorithm `from xfsort_collection.quick import sort`
+* Install `pip install sortpy`
+* Import sorting algorithm `from sortpy.quick import sort`
+Function doesnt check the output (for the sake of speed), and have correct type annotations, that talk about available types.
 
 Also
 --------
-Test coverage with fixtures and random generated test cases (reference function is python basic timsort)
+Test coverage with fixtures and random generated test cases (reference function is python basic timsort).  
+Has couple hundred parametrized tests.
