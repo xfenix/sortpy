@@ -1,6 +1,7 @@
 """Tests core.
 """
 from __future__ import annotations
+import types
 import string
 import random
 import typing
@@ -10,7 +11,7 @@ from importlib import import_module
 import pytest
 
 
-CURRENT_DIR = pathlib.Path(__file__).resolve().parent.parent
+CURRENT_DIR: pathlib.Path = pathlib.Path(__file__).resolve().parent.parent
 
 
 # Just various helpers
@@ -39,8 +40,8 @@ def gen_random_cases_generator(value_generator: typing.Callable) -> typing.Calla
 def run_one_case(input_case: dict, sort_module: str) -> None:
     """Test helper. Body of test.
     """
-    module = import_module(f"{CURRENT_DIR.stem}.{sort_module}")
-    assert tuple(module.sort(list(input_case["input"]))) == tuple(input_case["result"])
+    real_sort_module: types.ModuleType = import_module(f"{CURRENT_DIR.stem}.{sort_module}")
+    assert tuple(real_sort_module.sort(list(input_case["input"]))) == tuple(input_case["result"])
 
 
 def is_should_pass_and_warn(sort_module: str) -> bool:
