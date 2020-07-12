@@ -20,8 +20,8 @@ Python 3.7+ (test coverage include python 3.7, 3.8)
 Usage
 --------
 * Install `pip install sortpy`
-* Import sorting algorithm `from sortpy.quick import sort`
-Function doesnt check the output (for the sake of speed), and have correct type annotations, that talk about available types.
+* Import sorting algorithm `from sortpy.quick import sort`.  
+  Function doesnt check the output (for the sake of speed), and have correct type annotations, that talk about available types.
 
 Also
 --------
