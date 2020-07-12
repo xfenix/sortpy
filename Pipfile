@@ -9,6 +9,7 @@ verify_ssl = true
 pytest = "*"
 pytest-cov = "*"
 flit = "*"
+pytest-xdist = "*"
 
 [requires]
 python_version = "3"
