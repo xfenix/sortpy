@@ -1,8 +1,8 @@
 Normal sorting
 ===
 [![PyPI version](https://badge.fury.io/py/sortpy.svg)](https://badge.fury.io/py/sortpy)
-![CI status](https://github.com/xfenix/xfsort/workflows/Python%20package/badge.svg)
-[![codecov](https://codecov.io/gh/xfenix/xfsort/branch/master/graph/badge.svg)](https://codecov.io/gh/xfenix/xfsort)
+![CI status](https://github.com/xfenix/sortpy/workflows/Python%20package/badge.svg)
+[![codecov](https://codecov.io/gh/xfenix/sortpy/branch/master/graph/badge.svg)](https://codecov.io/gh/xfenix/sortpy)
 
 Various sorting algorithms implemented in pure python. Now with typing support and for python 3.7/3.8.  
 Currently implemented following:
